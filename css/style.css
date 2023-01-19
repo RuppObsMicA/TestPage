@@ -1,0 +1,221 @@
+/* Reset CSS */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+* {
+    box-sizing: border-box;
+}
+/* General */
+
+h1 {
+    font-weight: bold;
+    font-size: 46px;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 32px;
+}
+
+/* Main block */
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: flex;
+    width: 1000px;
+    border: 1px solid black;
+}
+
+.inner-wrapper {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+}
+
+.image-wrapper {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    width: 100%;
+    transform: scale(1.4, 1.4);
+}
+
+.product-description-wrapper {
+    padding-left: 20px;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.rating-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.stars-wrapper {
+    display: flex;
+}
+
+.stars-wrapper .star {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    background-image: url("star.png");
+    background-size: cover;
+}
+
+.product-heading {
+    margin-bottom: 20px;
+}
+
+.product-subheading {
+    margin-bottom: 30px;
+}
+
+.price {
+    font-weight: bold;
+    color: green;
+    font-size: 46px;
+    margin-bottom: 30px;
+}
+
+/* Tabs */
+
+.tabs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.tabs-navbar {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.tabs-nav {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.tabs-nav:hover {
+    color: #EC5118;
+}
+
+.tab {
+    height: 150px;
+    display: none;
+}
+
+/* Buttons */
+
+.buttons-wrapper {
+    display: flex;
+    user-select: none;
+}
+
+.quantity-button-wrapper,
+.add-to-cart-button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.quantity-button-wrapper {
+    border: 2px solid lightgray;
+    margin-right: 20px;
+}
+
+.quantity-button-wrapper .button-name {
+    width: 50%;
+    text-align: center;
+}
+
+.qnt-changer {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.qnt-changer div:nth-child(2n+1) {
+    cursor: pointer;
+}
+
+.add-to-cart-button-wrapper {
+    height: 53px;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.add-to-cart-button-wrapper:hover {
+    background-color: darkgreen;
+}
+
