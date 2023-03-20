@@ -150,11 +150,13 @@ h2 {
 }
 
 .stars-wrapper .star {
-    margin-right: 0.7em;
-    width: 1.3em;
-    height: 1.3em;
-    background-image: url("../images/star.png");
-    background-size: cover;
+    font-size: 2em;
+    cursor: pointer;
+    color: gray;
+}
+
+.star:hover{
+    color: gold; //change
 }
 
 .product-heading {
