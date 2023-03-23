@@ -30,9 +30,11 @@ function hoverStarRating(){ //add color to all stars before a hovered one
         }
     }
 }
+
 function saveData (){ //save the rating if we need
     let numberOfStar = this.classList[this.classList.length-1];
     alert(numberOfStar.slice(numberOfStar.length-1,numberOfStar.length));
+    removeStarRating();
 }
 
 function removeStarRating(){ //return default color
