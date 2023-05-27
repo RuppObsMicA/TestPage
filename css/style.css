@@ -54,9 +54,6 @@ table {
 /*Responsive design*/
 
 @media (max-width: 1000px) {
-
-    /*Как убрать отступ у контейнера*/
-
     .container{
         margin: 0 auto;
     }
@@ -74,6 +71,7 @@ table {
     }
     .image-wrapper {
         width: 100%;
+        margin-bottom: 1em;
     }
     .image-wrapper img {
         height: 60%;
@@ -123,16 +121,98 @@ h2 {
 .image-wrapper {
     width: 35%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 }
 
-.image-wrapper img {
-    max-width: 100%;
-    transform: scale(1.4, 1.4);
+
+.main-image{
+    width: 100%;
+    height: 70%;
+    margin: 0 auto;
+}
+.slider{
+    width: 17em;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.slider-wrapper{
+    width: 85em;
+    height: 100%;
+    display: flex;
+    left: 0;
+    position: relative;
+    transition: all ease 1s;
+}
+.slider-slide{
+    width: 17em;
+    height: 100%;
+}
+.slider-slide img{
+    width:100%;
+    height:100%;
+}
+.slider-buttons{
+    display: flex;
+    position: relative;
+    bottom: 11em;
+    width: 100%;
+}
+.slider-button-prev, .slider-button-next{
+    width: 50%;
+}
+.slider-button-prev img{
+    float: left;
+    cursor: pointer;
+}
+.slider-button-next img{
+    float: right;
+    cursor: pointer;
 }
 
+.secondary-slider{
+    width: 21em;
+    height: 30%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.slider-secondary-wrapper{
+    width: 70em;
+    margin: 2em auto;
+    display: flex;
+    position: relative;
+    left: 0;
+}
+.slider-secondary-wrapper div{
+    padding-right: 1em;
+    height: 6em;
+    width: 7em;
+}
+.pagination{
+    display: flex;
+    position: relative;
+    bottom: 2em;
+    text-align: center;
+    justify-content: center;
+
+}
+.pagination-wrapper{
+    display: flex;
+}
+.pagination div{
+    cursor: pointer;
+    padding-right: 0.1em;
+    font-size: 2em;
+}
+.pagination div:hover{
+    color: green;
+}
+
+/*Product description*/
 .product-description-wrapper {
     padding-left: 1.2em;
     width: 65%;

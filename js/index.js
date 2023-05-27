@@ -4,12 +4,23 @@ const averageStarsContainer = document.querySelectorAll(".gen_star");
 const commentForm = document.getElementById("comment-form");
 const commentArea = document.getElementsByClassName("all-comments");
 const NUMBER_OF_REVIEWS = document.getElementsByClassName("reviews")[0];
+const pagsContainer = document.querySelectorAll(".pag");
+
+// slider
+let widthOfSlider = 0;
+let widthOfSecondarySlider = 0;
+const sliderWrapper = document.querySelector(".slider-wrapper");
+const sliderSecondaryWrapper = document.querySelector(".slider-secondary-wrapper");
+
+// star rating
 let ratingForSubmit = "";
 let numberOfReviews = 0;
 let currentStarRating = 0;
 let generalStarRating = 0;
-commentForm.addEventListener("submit", submitComment);
 
+for (let i = 0; i < pagsContainer.length; i++){
+    pagsContainer[i].addEventListener("click", getPictureOfPagination);
+}
 tabsNavs.forEach((tabNav, idx) => {
     tabNav.addEventListener('click', e => {
         let x = document.getElementsByClassName("tab");
@@ -79,7 +90,7 @@ function removeStarRating() { //return default color
 }
 
 // Comment related section
-
+commentForm.addEventListener("submit", submitComment);
 function submitComment(e) {
     e.preventDefault();
     if (e.target[0].value == "" || ratingForSubmit === "") {
@@ -135,6 +146,43 @@ function submitComment(e) {
     }
 
 }
+
+// Slider section
+document.querySelector(".slider-button-prev img").addEventListener("click", function (){
+    widthOfSlider += 17;
+    widthOfSecondarySlider +=7;
+    if (widthOfSlider > 0){
+        widthOfSlider = -68;
+        widthOfSecondarySlider = -28;
+    }
+    sliderWrapper.style.left =  widthOfSlider + "em";
+    sliderSecondaryWrapper.style.left = widthOfSecondarySlider + "em";
+});
+document.querySelector(".slider-button-next img").addEventListener("click", function (){
+    widthOfSlider -= 17;
+    widthOfSecondarySlider -=7;
+    if (widthOfSlider < -68){
+        widthOfSlider = 0;
+        widthOfSecondarySlider = 0;
+    }
+    sliderWrapper.style.left =  widthOfSlider + "em";
+    sliderSecondaryWrapper.style.left = widthOfSecondarySlider + "em";
+});
+
+// Pagination
+function getPictureOfPagination(){
+    for (let i = 0; i < pagsContainer.length; i++){
+        if (this.classList.contains("pag-" + (i+1))){
+            widthOfSlider = -17*i;
+            widthOfSecondarySlider = -7*i;
+            sliderWrapper.style.left =  widthOfSlider + "em";
+            sliderSecondaryWrapper.style.left = widthOfSecondarySlider + "em";
+        }
+    }
+}
+
+
+
 
 
 
