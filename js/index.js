@@ -149,19 +149,19 @@ function submitComment(e) {
 
 // Slider section
 document.querySelector(".slider-button-prev img").addEventListener("click", function (){
-    widthOfSlider += 17;
+    widthOfSlider += 20;
     widthOfSecondarySlider +=7;
     if (widthOfSlider > 0){
-        widthOfSlider = -68;
+        widthOfSlider = -80;
         widthOfSecondarySlider = -28;
     }
     sliderWrapper.style.left =  widthOfSlider + "em";
     sliderSecondaryWrapper.style.left = widthOfSecondarySlider + "em";
 });
 document.querySelector(".slider-button-next img").addEventListener("click", function (){
-    widthOfSlider -= 17;
+    widthOfSlider -= 20;
     widthOfSecondarySlider -=7;
-    if (widthOfSlider < -68){
+    if (widthOfSlider < -80){
         widthOfSlider = 0;
         widthOfSecondarySlider = 0;
     }
@@ -173,7 +173,7 @@ document.querySelector(".slider-button-next img").addEventListener("click", func
 function getPictureOfPagination(){
     for (let i = 0; i < pagsContainer.length; i++){
         if (this.classList.contains("pag-" + (i+1))){
-            widthOfSlider = -17*i;
+            widthOfSlider = -20*i;
             widthOfSecondarySlider = -7*i;
             sliderWrapper.style.left =  widthOfSlider + "em";
             sliderSecondaryWrapper.style.left = widthOfSecondarySlider + "em";

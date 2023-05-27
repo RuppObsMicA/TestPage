@@ -134,13 +134,13 @@ h2 {
     margin: 0 auto;
 }
 .slider{
-    width: 17em;
+    width: 20em;
     height: 100%;
     margin: 0 auto;
     overflow: hidden;
 }
 .slider-wrapper{
-    width: 85em;
+    width: 100em;
     height: 100%;
     display: flex;
     left: 0;
@@ -148,7 +148,7 @@ h2 {
     transition: all ease 1s;
 }
 .slider-slide{
-    width: 17em;
+    width: 20em;
     height: 100%;
 }
 .slider-slide img{
@@ -186,6 +186,7 @@ h2 {
     display: flex;
     position: relative;
     left: 0;
+    transition: all ease 1s;
 }
 .slider-secondary-wrapper div{
     padding-right: 1em;
