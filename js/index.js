@@ -149,34 +149,34 @@ function submitComment(e) {
 
 // Slider section
 document.querySelector(".slider-button-prev img").addEventListener("click", function (){
-    widthOfSlider += 20;
-    widthOfSecondarySlider +=7;
+    widthOfSlider += 100;
+    widthOfSecondarySlider +=33.3;
     if (widthOfSlider > 0){
-        widthOfSlider = -80;
-        widthOfSecondarySlider = -28;
+        widthOfSlider = -400;
+        widthOfSecondarySlider = -132;
     }
-    sliderWrapper.style.left =  widthOfSlider + "em";
-    sliderSecondaryWrapper.style.left = widthOfSecondarySlider + "em";
+    sliderWrapper.style.left =  widthOfSlider + "%";
+    sliderSecondaryWrapper.style.left = widthOfSecondarySlider + "%";
 });
 document.querySelector(".slider-button-next img").addEventListener("click", function (){
-    widthOfSlider -= 20;
-    widthOfSecondarySlider -=7;
-    if (widthOfSlider < -80){
+    widthOfSlider -= 100;
+    widthOfSecondarySlider -=33.3;
+    if (widthOfSlider < -400){
         widthOfSlider = 0;
         widthOfSecondarySlider = 0;
     }
-    sliderWrapper.style.left =  widthOfSlider + "em";
-    sliderSecondaryWrapper.style.left = widthOfSecondarySlider + "em";
+    sliderWrapper.style.left =  widthOfSlider + "%";
+    sliderSecondaryWrapper.style.left = widthOfSecondarySlider + "%";
 });
 
 // Pagination
 function getPictureOfPagination(){
     for (let i = 0; i < pagsContainer.length; i++){
         if (this.classList.contains("pag-" + (i+1))){
-            widthOfSlider = -20*i;
-            widthOfSecondarySlider = -7*i;
-            sliderWrapper.style.left =  widthOfSlider + "em";
-            sliderSecondaryWrapper.style.left = widthOfSecondarySlider + "em";
+            widthOfSlider = -100*i;
+            widthOfSecondarySlider = -33.3*i;
+            sliderWrapper.style.left =  widthOfSlider + "%";
+            sliderSecondaryWrapper.style.left = widthOfSecondarySlider + "%";
         }
     }
 }

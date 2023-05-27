@@ -82,6 +82,8 @@ table {
     }
     .tabs-navbar {
         justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
     .tabs-nav{
         margin: 0 auto;
@@ -89,29 +91,71 @@ table {
     .tabs-container{
         font-size: 1.3em;
     }
+    .comments-wrapper{
+        width: 100%;
+    }
+    .form-wrapper{
+        width: 100%;
+    }
+    .comment-submit{
+        width: 50%;
+    }
+}
+/*to limit font-size*/
+@media screen and (min-width: 1024px) {
+    .product-heading h1{
+        font-size: 40px;
+    }
+    .price h1{
+        font-size: 40px;
+    }
+    .product-subheading h3{
+        font-size: 22px;
+    }
+    .tabs-navbar div{
+        font-size: 21px;
+    }
+    .tab-body{
+        font-size: 22px;
+    }
+    .buttons-wrapper div{
+        font-size: 20px;
+    }
+    #comment-form input{
+        font-size: 19px;
+    }
+    .stars-wrapper div,
+    .reviews-rating div{
+        font-size: 27px;
+    }
+    .new-comment div{
+        font-size: 18px;
+    }
 }
 
 /* General */
 
 h1 {
     font-weight: bold;
-    font-size: 3em;
+    font-size: calc(24px + 16 * (100vw / 1024));
 }
 
-h2 {
+h3 {
     font-weight: bold;
-    font-size: 2em;
+    font-size: calc(10px + 12 * (100vw / 1024));
 }
 
 /* Main block */
 
 .container {
     margin: 2em auto;
-    display: flex;
     flex-direction: column;
     max-width: 1000px;
 }
-
+.product-title{
+    justify-content: center;
+    text-align: center;
+}
 .inner-wrapper {
     display: flex;
     width: 100%;
@@ -127,20 +171,19 @@ h2 {
     overflow: hidden;
 }
 
-
 .main-image{
     width: 100%;
     height: 70%;
     margin: 0 auto;
 }
 .slider{
-    width: 20em;
+    width: 90%;
     height: 100%;
     margin: 0 auto;
     overflow: hidden;
 }
 .slider-wrapper{
-    width: 100em;
+    width: 500%;
     height: 100%;
     display: flex;
     left: 0;
@@ -148,7 +191,7 @@ h2 {
     transition: all ease 1s;
 }
 .slider-slide{
-    width: 20em;
+    width: 20%;
     height: 100%;
 }
 .slider-slide img{
@@ -158,7 +201,7 @@ h2 {
 .slider-buttons{
     display: flex;
     position: relative;
-    bottom: 11em;
+    bottom: 50%;
     width: 100%;
 }
 .slider-button-prev, .slider-button-next{
@@ -174,14 +217,14 @@ h2 {
 }
 
 .secondary-slider{
-    width: 21em;
+    width: 100%;
     height: 30%;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 }
 .slider-secondary-wrapper{
-    width: 70em;
+    width: 233%;
     margin: 2em auto;
     display: flex;
     position: relative;
@@ -190,13 +233,13 @@ h2 {
 }
 .slider-secondary-wrapper div{
     padding-right: 1em;
-    height: 6em;
-    width: 7em;
+    height: auto;
+    width: 33%;
 }
 .pagination{
     display: flex;
     position: relative;
-    bottom: 2em;
+    bottom: 10%;
     text-align: center;
     justify-content: center;
 
@@ -222,14 +265,13 @@ h2 {
 }
 .general-rating-wrapper{
     display: flex;
-    font-size: 1em;
+    justify-content: center;
 }
 .reviews-rating{
     display: flex;
     flex-direction: row;
     color: gray;
     cursor: pointer;
-    font-size: 1.5em;
 }
 
 .product-heading {
@@ -243,7 +285,6 @@ h2 {
 .price {
     font-weight: bold;
     color: green;
-    font-size: 3em;
     margin-bottom: 0.5em;
 }
 
@@ -263,7 +304,7 @@ h2 {
 }
 
 .tabs-nav {
-    font-size: 1.5em;
+    font-size: calc(13px + 8 * (100vw / 1024));
     font-weight: bold;
     padding-bottom: 0.3em;
     margin-left: 0;
@@ -280,7 +321,7 @@ h2 {
 }
 
 .tabs-container{
-    font-size: 1.3em;
+    font-size: calc(14px + 8 * (100vw / 1024));
 }
 
 /* Buttons */
@@ -301,7 +342,7 @@ h2 {
     width: 40%;
     height: 100%;
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: calc(12px + 8 * (100vw / 1024));
 }
 
 .quantity-button-wrapper {
@@ -354,7 +395,6 @@ h2 {
 }
 
 .stars-wrapper .star {
-    font-size: 2em;
     cursor: pointer;
     color: gray;
 }
@@ -362,7 +402,13 @@ h2 {
 .star:hover{
     color: gold; //change
 }
-
+.stars-wrapper,
+.reviews-rating{
+    font-size: calc(15px + 12 * (100vw / 1024));
+}
+.comments-wrapper{
+    width: 100%;
+}
 .all-comments{
     margin: 0 auto;
     width: 60%;
@@ -376,7 +422,7 @@ h2 {
     float: left;
     width: 50%;
     color: gold;
-    font-size: 1.5em;
+    font-size: calc(10px + 8 * (100vw / 1024));
 }
 
 .comment-date{
@@ -384,12 +430,12 @@ h2 {
     width: 50%;
     height: 1.5em;
     text-align: right;
-    font-size: 1.2em;
+    font-size: calc(10px + 8 * (100vw / 1024));;
 }
 
 .comment-text{
     padding-top: 1.5em;
-    font-size: 1.5em;
+    font-size: calc(10px + 8 * (100vw / 1024));
 }
 
 .form-wrapper{
@@ -404,7 +450,8 @@ h2 {
 }
 
 .comment-submit{
-    width: 13%;
-    height: 30px;
+    width: 5em;
+    height: auto;
     float: right;
+    font-size: calc(10px + 8 * (100vw / 1024));
 }

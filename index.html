@@ -4,10 +4,27 @@
     <meta charset="UTF-8">
     <title>Product Page</title>
     <link rel="stylesheet" href="css/style.css">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <div class="container">
+    <div class="product-title">
+        <div class="general-rating-wrapper">
+            <div class="reviews-rating">
+                <div class="gen_star gen_star_1">★</div>
+                <div class="gen_star gen_star_2">★</div>
+                <div class="gen_star gen_star_3">★</div>
+                <div class="gen_star gen_star_4">★</div>
+                <div class="gen_star gen_star_5">★</div>
+            </div>
+            <div class="reviews">
+                <div></div>
+            </div>
+        </div>
+        <div class="product-heading">
+            <h1>Lamp</h1>
+        </div>
+    </div>
     <div class="inner-wrapper">
         <div class="image-wrapper">
             <div class="main-image">
@@ -73,26 +90,11 @@
             </div>
         </div>
         <div class="product-description-wrapper">
-                <div class="general-rating-wrapper">
-                    <div class="reviews-rating">
-                        <div class="gen_star gen_star_1">★</div>
-                        <div class="gen_star gen_star_2">★</div>
-                        <div class="gen_star gen_star_3">★</div>
-                        <div class="gen_star gen_star_4">★</div>
-                        <div class="gen_star gen_star_5">★</div>
-                    </div>
-                    <div class="reviews">
-                        <div>Reviews (number)</div>
-                    </div>
-                </div>
-                <div class="product-heading">
-                    <h1>Lamp</h1>
-                </div>
                 <div class="product-subheading">
                     <h3>Unavailable</h3>
                 </div>
                 <div class="price">
-                    <h3>50.75 $</h3>
+                    <h1>50.75 $</h1>
                 </div>
                 <div class="tabs">
                     <div class="tabs-navbar">
@@ -173,7 +175,6 @@
             </div>
             <form id="comment-form">
                 <input type="text" class="comment-input" name="rowForComment" placeholder="Write a comment">
-                <br>
                 <input type="submit" class="comment-submit" value="Submit">
             </form>
         </div>
