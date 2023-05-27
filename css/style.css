@@ -183,7 +183,7 @@ h3 {
     overflow: hidden;
 }
 .slider-wrapper{
-    width: 500%;
+    width: 600%; /* hard code is bad */
     height: 100%;
     display: flex;
     left: 0;
